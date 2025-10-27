@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detective Extremo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loginDiv">
+    <h2>Detective Extremo</h2>
+    <input type="text" id="username" placeholder="Usuario"><br>
+    <input type="password" id="password" placeholder="Contraseña"><br>
+    <select id="nivel">
+        <option value="facil">Nivel: Fácil</option>
+        <option value="medio">Nivel: Medio</option>
+        <option value="dificil">Nivel: Difícil</option>
+    </select><br>
+    <button onclick="login()">Iniciar Juego</button>
+    <p id="loginMsg"></p>
+</div>
+
+<div id="gameDiv" style="display:none;">
+    <h2>Detective Extremo</h2>
+    <div id="timer"></div>
+    <div id="puntaje"></div>
+    <h3>Pistas</h3>
+    <div id="pistas"></div>
+    <button onclick="ayuda()">Ayuda (-10 puntos)</button>
+    <h3>Sospechosos</h3>
+    <div id="suspects"></div>
+    <button onclick="verificar()">Verificar sospechoso</button>
+    <textarea id="resultado" readonly></textarea>
+    <video id="videoVictoria" width="400" controls style="display:none">
+        <source src="video/victoria.mp4" type="video/mp4">
+    </video>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
